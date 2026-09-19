@@ -36,15 +36,16 @@ int main() {
     w.setRenderTarget(canvasTex);
     w.clear(Color::White);
     w.resetRenderTarget();
+    int font = w.loadFont("/usr/share/fonts/FiraCode-Medium.ttf",10);
 
     App app;
 
     HBox *root = new HBox(1.0, 1.0);
     VBox *toolbar = new VBox(100, 1.0);
 
-    Button *btnPen = new Button(1.0, -1);
+    Button *btnPen = new Button(1.0, -1, new Label(-1, -1, "Pen", font));
     btnPen->bg = Color::DarkGray;
-    Button *btnEraser = new Button(1.0, -1);
+    Button *btnEraser = new Button(1.0, -1, new Label(-1, -1, "Eraser", font));
     btnEraser->bg = Color::LightGray;
     Button *btnC1 = new Button(1.0, -1);
     btnC1->bg = Color::Red;
