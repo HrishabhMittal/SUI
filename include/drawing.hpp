@@ -302,6 +302,10 @@ class Window {
         aalineRGBA(renderer, x1 + offsetx, y1 + offsety, x2 + offsetx, y2 + offsety, curcolor.r, curcolor.g, curcolor.b,
                    curcolor.a);
     }
+    void drawThickLine(int x1, int y1, int x2, int y2, int size) {
+        thickLineRGBA(renderer, x1 + offsetx, y1 + offsety, x2 + offsetx, y2 + offsety, size, curcolor.r, curcolor.g,
+                      curcolor.b, curcolor.a);
+    }
     void drawRect(int x, int y, int w, int h) {
         x += offsetx;
         y += offsety;
